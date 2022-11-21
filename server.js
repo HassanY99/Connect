@@ -14,6 +14,9 @@ const PORT = process.env.PORT || 5000;
 // Connect to Database
 connectDB();
 
+// Init Middle
+app.use(express.json({ extended: false }));
+
 // Define routes
 app.use('/api/users', users);
 app.use('/api/profile', profile);
