@@ -1,4 +1,6 @@
 {
     "mongoURI" : "mongodb+srv://ConnectApp:Connect321!@connect.6zwnkvp.mongodb.net/?retryWrites=true&w=majority",
-    "jwtSecret": "mysecretkey"
+    "jwtSecret": "mysecretkey",
+    "githubClientId" : "db9d9b5d694e84f6da1e",
+    "githubSecret":"e7ea0677d4021f71d59b03048a92ffdd8712af58"
 }
