@@ -601,6 +601,11 @@ video {
   }
 }
 
+.my-1{
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .mx-24{
   margin-left: 6rem;
   margin-right: 6rem;
@@ -609,11 +614,6 @@ video {
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-1{
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
 }
 
 .ml-24{
@@ -636,16 +636,12 @@ video {
   margin-bottom: 1rem;
 }
 
-.mt-6{
-  margin-top: 1.5rem;
-}
-
 .ml-1{
   margin-left: 0.25rem;
 }
 
-.ml-2{
-  margin-left: 0.5rem;
+.mt-6{
+  margin-top: 1.5rem;
 }
 
 .block{
@@ -674,10 +670,6 @@ video {
 
 .max-w-sm{
   max-width: 24rem;
-}
-
-.max-w-md{
-  max-width: 28rem;
 }
 
 .flex-1{
@@ -741,14 +733,9 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.bg-black{
+.bg-red{
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-blue-700{
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+  background-color: rgb(198 36 32 / var(--tw-bg-opacity));
 }
 
 .bg-white{
@@ -761,16 +748,31 @@ video {
   background-color: rgb(1 148 154 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-blue-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
 .p-2{
   padding: 0.5rem;
+}
+
+.p-3{
+  padding: 0.75rem;
 }
 
 .p-4{
   padding: 1rem;
 }
 
-.p-3{
-  padding: 0.75rem;
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .px-4{
@@ -788,11 +790,6 @@ video {
   padding-right: 0.5rem;
 }
 
-.py-2\.5{
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-}
-
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -803,9 +800,9 @@ video {
   padding-bottom: 2rem;
 }
 
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+.py-2\.5{
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
 }
 
 .pl-3{
@@ -814,10 +811,6 @@ video {
 
 .pr-4{
   padding-right: 1rem;
-}
-
-.pl-1{
-  padding-left: 0.25rem;
 }
 
 .text-center{
@@ -846,11 +839,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -859,6 +847,11 @@ video {
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .leading-none{
@@ -884,10 +877,6 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.underline{
-  text-decoration-line: underline;
-}
-
 .no-underline{
   text-decoration-line: none;
 }
@@ -896,6 +885,11 @@ video {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.filter{
+  -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+          filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 html,

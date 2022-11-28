@@ -1,8 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setAlert } from '../actions/alert';
+import PropTypes from 'prop-types';
+import Alert from "./Alert";
 
-const Register = () => {
+const Register = ({ setAlert }) => {
 
     const [formData, setFormData] = useState({
         fullname: '',
@@ -18,7 +22,7 @@ const Register = () => {
         e.preventDefault();
 
         if(password !== confirmPass) {
-            console.log('Passwords do not match');
+            setAlert('Passwords do not match', 'danger');
         } else {
         console.log(formData);
         }
@@ -31,8 +35,10 @@ const Register = () => {
       <div className="bg-grey-lighter min-h-screen flex flex-col background">
             <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
                 <form className="bg-white px-6 py-8 rounded shadow-md text-black w-full"
+                
                 onSubmit={e => onSubmit(e)}>
                     <h1 className="mb-8 text-3xl text-center">Sign up</h1>
+                <Alert />
                     <input 
                         type="text"
                         className="block border border-grey-light w-full p-3 rounded mb-4"
@@ -75,11 +81,11 @@ const Register = () => {
 
                     <div className="text-center text-sm text-grey-dark mt-4">
                         By signing up, you agree to the <br />
-                        <a className="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                        <a className="no-underline border-b border-grey-dark text-grey-dark" href="/">
                             Terms of Service
                         </a> and 
                         <br />
-                        <a className="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                        <a className="no-underline border-b border-grey-dark text-grey-dark" href="/">
                             Privacy Policy
                         </a>
                     </div>
@@ -98,4 +104,8 @@ const Register = () => {
   )
 }
 
-export default Register
+Register.propTypes = {
+    setAlert: PropTypes.func.isRequired
+}
+
+export default connect(null, { setAlert })(Register);

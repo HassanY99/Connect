@@ -1,15 +1,19 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
-import {BrowserRouter as Router, Routes, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from "./components/Login";
 import Register from "./components/Register";
+// Redux
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
 
     <div className="app">
 
+      <Provider store={store}>
       <Router>
         <Navbar/>
         <Routes>
@@ -20,6 +24,7 @@ function App() {
 
         </Routes>  
       </Router>
+      </Provider>
 
     </div>
 
