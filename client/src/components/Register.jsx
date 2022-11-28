@@ -5,17 +5,18 @@ import { connect } from 'react-redux';
 import { setAlert } from '../actions/alert';
 import PropTypes from 'prop-types';
 import Alert from "./Alert";
+import {register} from '../actions/auth';
 
-const Register = ({ setAlert }) => {
+const Register = ({ setAlert, register }) => {
 
     const [formData, setFormData] = useState({
-        fullname: '',
+        name: '',
         email: '',
         password: '',
         confirmPass: ''
     });
 // Destructure formData -> instead of using formData.name etc
-    const { fullname, email, password, confirmPass } = formData;
+    const { name, email, password, confirmPass } = formData;
 
     const onChange = e => setFormData({ ...formData, [e.target.name] : e.target.value});
     const onSubmit = e => {
@@ -24,7 +25,7 @@ const Register = ({ setAlert }) => {
         if(password !== confirmPass) {
             setAlert('Passwords do not match', 'danger');
         } else {
-        console.log(formData);
+            register({ name, email, password })
         }
     }
 
@@ -43,10 +44,10 @@ const Register = ({ setAlert }) => {
                         type="text"
                         className="block border border-grey-light w-full p-3 rounded mb-4"
                         placeholder="Full Name"
-                        name="fullname"
-                        value={fullname}
+                        name="name"
+                        value={name}
                         onChange={e => onChange(e)}
-                        required />
+                         />
 
                     <input 
                         type="text"
@@ -55,7 +56,7 @@ const Register = ({ setAlert }) => {
                         name="email"
                         value={email}
                         onChange={e => onChange(e)}
-                        required />
+                         />
 
                     <input 
                         type="password"
@@ -64,8 +65,7 @@ const Register = ({ setAlert }) => {
                         name="password"
                         value={password}
                         onChange={e => onChange(e)}
-                        minLength={6}
-                        required />
+                         />
                     <input 
                         type="password"
                         className="block border border-grey-light w-full p-3 rounded mb-4"
@@ -105,7 +105,8 @@ const Register = ({ setAlert }) => {
 }
 
 Register.propTypes = {
-    setAlert: PropTypes.func.isRequired
+    setAlert: PropTypes.func.isRequired,
+    register: PropTypes.func.isRequired,
 }
 
-export default connect(null, { setAlert })(Register);
+export default connect(null, { setAlert, register })(Register);
