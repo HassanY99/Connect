@@ -1,8 +1,16 @@
 import React from 'react'
 import '../index.css';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types'
 
-const Landing = () => {
+
+const Landing = ({ isAuthenticated }) => {
+
+  if(isAuthenticated) {
+    return <Navigate to='/dashboard' />
+  }
+
   return (
 
 <header className='background'>
@@ -21,12 +29,16 @@ const Landing = () => {
   </div>
 </header>
 </header>
-        
-
-
-        
 
   )
 }
 
-export default Landing
+Landing.propTypes = {
+  isAuthenticated: PropTypes.bool
+}
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+})
+
+export default connect(mapStateToProps)(Landing)
