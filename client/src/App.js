@@ -4,11 +4,15 @@ import Landing from "./components/Landing";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Dashboard from "./components/dashboard/Dashboard";
 // Redux
 import { Provider } from "react-redux";
 import store from "./store";
 import setAuthToken from "./utils/setAuthToken";
 import { loadUser } from "./actions/auth";
+
+// Private Route
+import PrivateRoute from "./components/routing/PrivateRoute";
 
 
 if(localStorage.token) {
@@ -33,6 +37,12 @@ function App() {
 
             <Route exact path="/login" element={<Login/>} />
             <Route exact path="/register" element={<Register/>} />
+
+            <Route element={<PrivateRoute />}>
+                <Route exact path="/dashboard" element={<Dashboard />} />
+            </Route>
+
+
 
         </Routes>  
       </Router>
