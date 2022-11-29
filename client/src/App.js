@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import './App.css';
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -13,6 +14,7 @@ import { loadUser } from "./actions/auth";
 
 // Private Route
 import PrivateRoute from "./components/routing/PrivateRoute";
+import CreateProfile from "./components/profile/CreateProfile";
 
 
 if(localStorage.token) {
@@ -40,6 +42,7 @@ function App() {
 
             <Route element={<PrivateRoute />}>
                 <Route exact path="/dashboard" element={<Dashboard />} />
+                <Route exact path="/create-profile" element={<CreateProfile />} />
             </Route>
 
 

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../actions/profile'
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Alert from '../Alert';
 
 const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { loading, profile} }) => {
 
@@ -14,6 +15,7 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { loading, prof
 
   return loading && profile === null ? <i class="fa-solid fa-spinner"></i> : <div>
     <h1>Dasboard</h1>
+    <Alert />
     <p>Welcome { user.name}</p>
     {profile !== null ? <div>YOU HAVE A PROFILE</div> : <div>
         <p>You do not have a profile, please create your profile.</p>
