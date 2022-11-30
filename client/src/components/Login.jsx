@@ -3,6 +3,7 @@ import { Link, Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { loginUser } from '../actions/auth';
 import PropTypes from 'prop-types';
+import Alert from './Alert';
 
 const Login = ({ loginUser, isAuthenticated }) => {
 
@@ -34,7 +35,7 @@ const Login = ({ loginUser, isAuthenticated }) => {
                 <form className="bg-white px-6 py-8 rounded shadow-md text-black w-full"
                 onSubmit={e => onSubmit(e)}>
                     <h1 className="mb-8 text-3xl text-center">Sign in</h1>
-
+                    <Alert />
                     <input 
                         type="text"
                         className="block border border-grey-light w-full p-3 rounded mb-4"
