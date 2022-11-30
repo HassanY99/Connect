@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Alert from '../Alert';
 import { DashboardActions } from './DashboardActions';
+import Experience from './Experience';
+import Educations from './Educations';
 
 const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { loading, profile} }) => {
 
@@ -18,7 +20,9 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { loading, prof
     <h1>Dasboard</h1>
     <Alert />
     <p>Welcome { user.name}</p>
-    {profile !== null ? <div><DashboardActions /></div> : <div>
+    {profile !== null ? <div><DashboardActions /> 
+                              <Experience experience={profile.experience} />
+                              <Educations education={profile.education} /> </div> : <div>
         <p>You do not have a profile, please create your profile.</p>
         <Link to='/create-profile' className='btn btn-primary'> Create Profile </Link> </div>}
   </div>

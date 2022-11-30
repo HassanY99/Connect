@@ -692,6 +692,10 @@ video {
   display: flex;
 }
 
+.table{
+  display: table;
+}
+
 .hidden{
   display: none;
 }
@@ -894,6 +898,11 @@ video {
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-red{
+  --tw-text-opacity: 1;
+  color: rgb(198 36 32 / var(--tw-text-opacity));
 }
 
 .no-underline{
