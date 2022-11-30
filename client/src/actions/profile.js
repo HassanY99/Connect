@@ -1,7 +1,6 @@
 import axios from "axios";
 import { setAlert } from "./alert";
 import { CLEAR_PROFILE, DELETE_ACCOUNT, GET_PROFILE, GET_PROFILES, GET_REPOS, PROFILE_ERROR, UPDATE_PROFILE } from "./types";
-import {useNavigate} from 'react-router-dom';
 
 
 
@@ -239,7 +238,7 @@ export const deleteAccount = () => async dispatch => {
 
         try {
 
-            const res = await axios.delete(`/api/profile`);
+            await axios.delete(`/api/profile`);
     
             dispatch({
                 type: CLEAR_PROFILE,
