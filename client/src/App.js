@@ -15,6 +15,7 @@ import { loadUser } from "./actions/auth";
 // Private Route
 import PrivateRoute from "./components/routing/PrivateRoute";
 import CreateProfile from "./components/profile/CreateProfile";
+import EditProfile from "./components/profile/EditProfile";
 
 
 if(localStorage.token) {
@@ -43,6 +44,7 @@ function App() {
             <Route element={<PrivateRoute />}>
                 <Route exact path="/dashboard" element={<Dashboard />} />
                 <Route exact path="/create-profile" element={<CreateProfile />} />
+                <Route exact path="/edit-profile" element={<EditProfile />} />
             </Route>
 
 

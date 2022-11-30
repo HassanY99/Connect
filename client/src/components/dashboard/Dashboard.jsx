@@ -5,6 +5,7 @@ import { getCurrentProfile } from '../../actions/profile'
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Alert from '../Alert';
+import { DashboardActions } from './DashboardActions';
 
 const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { loading, profile} }) => {
 
@@ -13,11 +14,11 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, profile: { loading, prof
     }, [getCurrentProfile]);
     
 
-  return loading && profile === null ? <i class="fa-solid fa-spinner"></i> : <div>
+  return loading && profile === null ? <i class="fa-solid fa-spinner"></i> : <div className='flex flex-col justify-center my-20  '>
     <h1>Dasboard</h1>
     <Alert />
     <p>Welcome { user.name}</p>
-    {profile !== null ? <div>YOU HAVE A PROFILE</div> : <div>
+    {profile !== null ? <div><DashboardActions /></div> : <div>
         <p>You do not have a profile, please create your profile.</p>
         <Link to='/create-profile' className='btn btn-primary'> Create Profile </Link> </div>}
   </div>

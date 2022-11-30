@@ -46,7 +46,9 @@ const Navbar = ({ logout, auth: { isAuthenticated, loading }}) => {
     <nav class="navbar bg-dark">
     <h1>
     <Link to="/" className="">
-         <span className="font-opensans"> Connect</span>
+         <span className="font-opensans"> 
+         <i class="fas fa-users"></i>{' '}
+         Connect</span>
      </Link>
     </h1>
     <ul>
