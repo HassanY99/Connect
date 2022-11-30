@@ -16,6 +16,8 @@ import { loadUser } from "./actions/auth";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import CreateProfile from "./components/profile/CreateProfile";
 import EditProfile from "./components/profile/EditProfile";
+import AddExperience from "./components/profile/AddExperience";
+import AddEducation from "./components/profile/AddEducation";
 
 
 if(localStorage.token) {
@@ -45,6 +47,8 @@ function App() {
                 <Route exact path="/dashboard" element={<Dashboard />} />
                 <Route exact path="/create-profile" element={<CreateProfile />} />
                 <Route exact path="/edit-profile" element={<EditProfile />} />
+                <Route exact path="/add-experience" element={<AddExperience />} />
+                <Route exact path="/add-education" element={<AddEducation />} />
             </Route>
 
 
