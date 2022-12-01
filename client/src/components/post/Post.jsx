@@ -6,6 +6,7 @@ import PostItem from '../posts/PostItem';
 import CommentForm from '../post/CommentForm';
 import CommentItem from '../post/CommentItem';
 import { getPostById } from '../../actions/post';
+import Alert from '../Alert';
 
 const Post = ({ getPostById, post: { post, loading } }) => {
   const { id } = useParams();
@@ -20,6 +21,7 @@ const Post = ({ getPostById, post: { post, loading } }) => {
       <Link to="/posts" className="btn">
         Back To Posts
       </Link>
+      <Alert />
       <PostItem post={post} showActions={false} />
       <CommentForm postId={post._id} />
       <div className="comments">

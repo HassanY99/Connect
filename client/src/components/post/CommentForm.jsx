@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { addComment } from '../../actions/post';
 
 const CommentForm = ({ postId, addComment }) => {
   const [text, setText] = useState('');
@@ -12,9 +13,15 @@ const CommentForm = ({ postId, addComment }) => {
       </div>
       <form
         className='form my-1'
+        onSubmit={e => {
+          e.preventDefault();
+          addComment(postId, { text });
+          setText('');
+        }}
       >
         <textarea
           name='text'
+          className='text-black'
           cols='30'
           rows='5'
           placeholder='Comment the post'
@@ -22,7 +29,7 @@ const CommentForm = ({ postId, addComment }) => {
           onChange={e => setText(e.target.value)}
           required
         />
-        <input type='submit' className='btn btn-dark my-1' value='Submit' />
+        <input type='submit' className='btn btn-dark my-1 bg-turq' value='Submit' />
       </form>
     </div>
   );
@@ -34,5 +41,5 @@ CommentForm.propTypes = {
 
 export default connect(
   null,
-  { }
+  { addComment }
 )(CommentForm);
