@@ -24,7 +24,6 @@ app.use('/api/posts', posts);
 app.use('/api/auth', auth);
 
 // Serve frontend from server - vercel
-if(process.env.NODE_ENV == 'production'){
     const path = require('path')
 
     app.get('/',(req,res) => {
@@ -32,7 +31,6 @@ if(process.env.NODE_ENV == 'production'){
         app.use(express.static(path.resolve(__dirname,'client','build')))
         res.sendFile(path.resolve(__dirname,'client','build','index.html'))
     })
-}
 
 
 
