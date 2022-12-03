@@ -24,6 +24,8 @@ app.use('/api/posts', posts);
 app.use('/api/auth', auth);
 
 // Serve frontend from server - vercel
+const path = require('path');
+
 app.use(express.static(path.join(__dirname, "./client/build")));
 app.get("*", function (_, res) {
   res.sendFile(
