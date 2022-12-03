@@ -2,7 +2,7 @@
   "name": "connect",
   "version": "1.0.0",
   "description": "Social Network Website",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HassanY99/Connect.git"
+    "url": "git+https://github.com/HassanY99/MERN-Connect.git"
   },
   "author": "Hassan Yusuf",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HassanY99/Connect/issues"
+    "url": "https://github.com/HassanY99/MERN-Connect/issues"
   },
-  "homepage": "https://github.com/HassanY99/Connect#readme",
+  "homepage": "https://github.com/HassanY99/MERN-Connect#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "concurrently": "^7.6.0",
