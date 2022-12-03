@@ -50,35 +50,21 @@ const Navbar = ({ logout, auth: { isAuthenticated, loading }}) => {
 
   return (
 
-    <nav class="navbar bg-dark">
+    <nav class="navbar bg-black py-4">
     <h1>
-    <Link to="/" className="">
-         <span className="font-opensans"> 
-         <i class="fas fa-users"></i>{' '}
+    <Link to="/" className="text-[24px]">
+         <span className="font-opensans text-turq"> 
+         <i class="fas fa-users text-grey"></i>{' '}
          Connect</span>
      </Link>
     </h1>
     <ul>
-    <div className="font-serif">
+    <div className="font-opensans flex justify-end">
        {!loading && (<div>{isAuthenticated ? authLinks : guestLinks}</div>)}
      </div>
     </ul>
   </nav>
 
-/* <nav className="bg-black border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-  <div className="container flex flex-wrap items-center justify-between mx-auto">
-    {/* Logo */
-    // <Link to="/" className="flex items-center">
-    //     <span className="self-center text-2xl font-opensans whitespace-nowrap dark:text-white"><i className='fas fa-code'></i> Connect</span>
-    // </Link>
-    
-    // {/* Links */}
-    // <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-    //   {!loading && (<div>{isAuthenticated ? authLinks : guestLinks}</div>)}
-    // </div>
-
-  // </div>
-// </nav> */}
 
 
   )

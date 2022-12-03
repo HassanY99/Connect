@@ -13,10 +13,11 @@ const Posts = ({ getPosts, post: { posts } }) => {
 
   return (
     <section className="container">
-      <h1 className="large text-primary">Posts</h1>
+      <h1 class="text-primary lead font-sans flex justify-center">
+        Posts</h1>
       <Alert />
-      <p className="lead">
-        <i className="fas fa-user" /> Welcome to the community
+      <p class="lead large text-gray font-sans flex justify-center mt-6">
+        <i className="fas fa-user mr-3 text-turq" /> Welcome to the community
       </p>
       <PostForm />
       <div className="posts">

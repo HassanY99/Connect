@@ -10,16 +10,20 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   }, [getProfiles]);
 
   return (
+    <div className='bg-grey-lighter'>
     <section className="container">
+      
       {loading ? (
        <i class="fa-solid fa-spinner"></i>
       ) : (
         <Fragment>
-          <h1 className="large text-primary">Developers</h1>
-          <p className="lead">
+          <h1 className="large text-turq font-sans flex justify-center">Developers</h1>
+
+          <p className="lead text-[18px] flex justify-center">
             <i className="font-opensans" /> Browse and connect with
             developers
           </p>
+
           <div className="profiles">
             {profiles.length > 0 ? (
               profiles.map((profile) => (
@@ -32,6 +36,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         </Fragment>
       )}
     </section>
+    </div>
   );
 };
 

@@ -8,18 +8,18 @@ const ProfileAbout = ({
     user: { name }
   }
 }) => (
-  <div className='profile-about bg-light p-2'>
+  <div className='profile-about bg-blue-100 p-2 font-opensans rounded-md'>
     {bio && (
       <Fragment>
-        <h2 className='text-primary'>{name.trim().split(' ')[0]}s Bio</h2>
-        <p>{bio}</p>
+        <h2 className='text-primary font-opensans'>{name.trim().split(' ')[0]}'s Bio</h2>
+        <p className='text-black mt-2'>{bio}</p>
         <div className='line' />
       </Fragment>
     )}
-    <h2 className='text-primary'>Skill Set</h2>
-    <div className='skills'>
+    <h2 className='text-primary font-opensans'>Skill Set</h2>
+    <div className='skills text-red font-opensans'>
       {skills.map((skill, index) => (
-        <div key={index} className='p-1'>
+        <div key={index} className='p-1 font-opensans'>
           <i className='fas fa-check' /> {skill}
         </div>
       ))}

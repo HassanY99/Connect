@@ -16,18 +16,21 @@ const Dashboard = ({ getCurrentProfile, auth: { user }, deleteAccount, profile: 
     }, [getCurrentProfile]);
     
 
-  return loading && profile === null ? <i class="fa-solid fa-spinner"></i> : <div className='flex flex-col justify-center my-20  '>
-    <h1>Dasboard</h1>
+  return loading && profile === null ? <i class="fa-solid fa-spinner"></i> : <div className='bg-grey-lighter min-h-screen flex flex-col background'>
+    <h1 className='large text-turq font-sans flex justify-center mt-20'>Dasboard</h1>
     <Alert />
-    <p>Welcome { user.name}</p>
+    <p className="lead text-[20px] flex justify-center" >Welcome, <span className='text-red ml-2'> { user.name} </span></p>
     {profile !== null ? <div><DashboardActions /> 
                               <Experience experience={profile.experience} />
                               <Educations education={profile.education} />
-                              <div className="my-2">
+                              <div className="my-4 flex justify-center">
                                 <button className='btn btn-danger' onClick={() => deleteAccount()}>
                                   <i className='fas fa-user-minus'> Delete My Account</i></button></div> </div> : <div>
-        <p>You do not have a profile, please create your profile.</p>
-        <Link to='/create-profile' className='btn btn-primary'> Create Profile </Link> </div>}
+        <p className='text-grey font-sans flex justify-center'>You do not have a profile, please create your profile.</p>
+        <div className='flex justify-center mt-6'>
+        <Link to='/create-profile' className='btn btn-primary'> Create Profile </Link> </div>
+        </div>
+        }
   </div>
 }
 

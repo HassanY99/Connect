@@ -76,15 +76,15 @@ useEffect(() => {
       }
 
   return (
-    <div>
-    <h1 class="large text-primary">
+    <div className='all'>
+    <h1 class="text-primary lead font-sans flex justify-center">
       Create Your Profile
     </h1>
-    <p class="lead">
-      <i class="fas fa-user"></i> Let's get some information to make your
+    <p class="lead large text-turq font-sans flex justify-center mt-6">
+      <i class="fas fa-user mr-2"></i> Let's get some information to make your
       profile stand out
     </p>
-    <small>* = required field</small>
+    <small className='text-gray font-sans flex justify-center'>* = required field</small>
     <form class="form" onSubmit={e => onSubmit(e)}>
         <Alert />
       <div class="form-group">

@@ -85,23 +85,14 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
                     >Create Account</button>
 
                     <div className="text-center text-sm text-grey-dark mt-4">
-                        By signing up, you agree to the <br />
-                        <a className="no-underline border-b border-grey-dark text-grey-dark" href="/">
-                            Terms of Service
-                        </a> and 
-                        <br />
-                        <a className="no-underline border-b border-grey-dark text-grey-dark" href="/">
-                            Privacy Policy
-                        </a>
+                        <div className="text-grey-dark mt-6">
+                        Already have an account? 
+                        <Link className="no-underline border-b border-blue text-blue ml-1" to="/login">
+                            Log in
+                        </Link>.
+                        </div>
                     </div>
                 </form>
-
-                <div className="text-grey-dark mt-6">
-                    Already have an account? 
-                    <Link className="no-underline border-b border-blue text-blue ml-1" to="/login">
-                        Log in
-                    </Link>.
-                </div>
             </div>
         </div>
 

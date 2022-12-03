@@ -8,7 +8,7 @@ const PostForm = ({ addPost }) => {
 
   return (
     <div className='post-form'>
-      <div className='bg-primary p'>
+      <div class="lead large text-turq font-sans flex justify-start ml-12 mt-6">
         <h3>Say Something...</h3>
       </div>
       <form
@@ -22,7 +22,7 @@ const PostForm = ({ addPost }) => {
       >
         <textarea
           name='text'
-          className='text-black'
+          className='text-black bg-grey'
           cols='30'
           rows='5'
           placeholder='Create a post'

@@ -26,15 +26,15 @@ const AddExperience = ({ addExperience }) => {
     const history = useNavigate();
 
   return (
-    <div>
-        <h1 class="large text-primary">
+    <div className='all'>
+       <h1 class="text-primary lead font-sans flex justify-center">
        Add An Experience
       </h1>
-      <p class="lead">
-        <i class="fas fa-code-branch"></i> Add any developer/programming
+      <p class="lead large text-turq font-sans flex justify-center mt-6">
+        <i class="fas fa-code-branch mr-2"></i> Add any developer/programming
         positions that you have had in the past
       </p>
-      <small>* = required field</small>
+      <small className='text-gray font-sans flex justify-center'>* = required field</small>
       <form class="form" onSubmit={e => {
         e.preventDefault();
 

@@ -18,16 +18,15 @@ const Post = ({ getPostById, post: { post, loading } }) => {
     <i class="fa-solid fa-spinner"></i>
   ) : (
     <section className="container">
-      <Link to="/posts" className="btn">
-        Back To Posts
-      </Link>
       <Alert />
       <PostItem post={post} showActions={false} />
       <CommentForm postId={post._id} />
+      <div className='posted-item'>
       <div className="comments">
         {post.comments.map((comment) => (
           <CommentItem key={comment._id} comment={comment} postId={post._id} />
         ))}
+      </div>
       </div>
     </section>
   );

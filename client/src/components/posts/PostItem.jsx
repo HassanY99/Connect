@@ -13,22 +13,22 @@ const PostItem = ({
   post: { _id, text, name, avatar, user, likes, comments, date },
   showActions
 }) => (
-  <div className="post bg-white p-1 my-1">
+  <div className="post bg-grey rounded-md p-4 my-3 flex">
     <div>
       <Link to={`/profile/${user}`}>
-        <img className="round-img" src={avatar} alt="" />
-        <h4>{name}</h4>
+        <img className="round-img p-1" src={avatar} alt="" />
+        <h4 className='text-black mt-3'>{name}</h4>
       </Link>
     </div>
     <div>
-      <p className="my-1">{text}</p>
-      <p className="post-date">Posted on <Moment format='YYYY/MM/DD'>{date}</Moment></p>
+      <p className="my-1 text-black">{text}</p>
+      <p className="post-date text-dark-grey">Posted on <Moment format='YYYY/MM/DD'>{date}</Moment></p>
 
       {showActions && (
         <Fragment>
           <button
             type="button"
-            className="btn btn-light bg-blue-300"
+            className="btn bg-blue-300"
             onClick={e => addLike(_id)}
           >
             <i className="fas fa-thumbs-up" />{' '}
@@ -36,7 +36,7 @@ const PostItem = ({
           </button>
           <button
             type="button"
-            className="btn btn-light text-black bg-pink-400"
+            className="btn text-black bg-pink-400"
             onClick={e => removeLike(_id)}
           >
             <i className="fas fa-thumbs-down" />

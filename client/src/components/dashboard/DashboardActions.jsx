@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export const DashboardActions = () => {
   return (
-    <div className="dash-buttons">
+    <div className="large font-sans flex justify-center">
     <Link to="/edit-profile" className="btn btn-light"
       ><i className="fas fa-user-circle text-primary"></i> Edit Profile</Link
     >

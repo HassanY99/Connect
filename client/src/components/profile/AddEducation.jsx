@@ -26,14 +26,14 @@ const AddEducation = ({ addEducation }) => {
     const history = useNavigate();
 
   return (
-    <div>
-        <h1 class="large text-primary">
+    <div className='all'>
+      <h1 class="text-primary lead font-sans flex justify-center">
        Add Your Education
       </h1>
-      <p class="lead">
-        <i class="fas fa-code-branch"></i> Add any school or bootcamp that you have attended
+      <p class="lead large text-turq font-sans flex justify-center mt-6">
+        <i class="fas fa-code-branch mr-2"></i> Add any school or bootcamp that you have attended
       </p>
-      <small>* = required field</small>
+      <small className='text-gray font-sans flex justify-center'>* = required field</small>
       <form class="form" onSubmit={e => {
         e.preventDefault();
 

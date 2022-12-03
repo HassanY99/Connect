@@ -19,6 +19,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth }) => {
     <section className="container">
       {profile === null ? (
         <i class="fa-solid fa-spinner"></i>
+        
       ) : (
         <Fragment>
           <Link to="/profiles" className="btn btn-light">
@@ -34,7 +35,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth }) => {
           <div className="profile-grid my-1">
             <ProfileTop profile={profile} />
             <ProfileAbout profile={profile} />
-            <div className="profile-exp bg-white p-2">
+            <div className="profile-exp bg-grey font-opensans rounded-md p-2">
               <h2 className="text-primary">Experience</h2>
               {profile.experience.length > 0 ? (
                 <Fragment>
@@ -46,11 +47,11 @@ const Profile = ({ getProfileById, profile: { profile }, auth }) => {
                   ))}
                 </Fragment>
               ) : (
-                <h4>No experience credentials</h4>
+                <h4 className='text-black'>No experience credentials</h4>
               )}
             </div>
 
-            <div className="profile-edu bg-white p-2">
+            <div className="profile-edu bg-grey rounded-md font-opensans p-2">
               <h2 className="text-primary">Education</h2>
               {profile.education.length > 0 ? (
                 <Fragment>
@@ -62,7 +63,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth }) => {
                   ))}
                 </Fragment>
               ) : (
-                <h4>No education credentials</h4>
+                <h4 className='text-black'>No education credentials</h4>
               )}
             </div>
 
