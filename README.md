@@ -8,7 +8,7 @@
 
   This application lets users from all over the world to share their portfolio, skills, educations and experiences with another. Users that share similar interests and profession can showcase their skills, create posts, create discussion and get help. At this point, users can only create and view developers dashboard but in future updates I would like to add other professions like medical, business, sports, chef etc.
   
-  Link of live app: [Live App](https://fitness-tracker-live.herokuapp.com/)
+  Link of live app: [Live App](https://talented-zipper-hen.cyclic.app)
 
   ## Licensing
 
