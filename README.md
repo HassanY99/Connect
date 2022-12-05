@@ -74,7 +74,7 @@ That's it, you are good to go! Now you can successfully run the app in your loca
   - Tailwind
   - Bootstrap
   
-  ## Tests
+  ## App Walkthrough
 
   - [Full Video](https://drive.google.com/file/d/1Ys2LGScf0zBTgnlRZZwn5Dw164LzmTkQ/view)
   
